@@ -7,7 +7,7 @@ gem 'rails', '4.2.0'
 gem 'bower-rails'
 
 # Database
-gem 'pg'
+gem 'mysql2', '~> 0.4.2'
 
 # Assets
 gem 'sass-rails', '~> 5.0.1'
