@@ -1,9 +1,8 @@
 default: &default
-  adapter: postgresql
+  adapter: mysql2
   host: localhost
-  encoding: unicode
-  pool: 5
-  timeout: 5000
+  encoding: utf8
+  secure_auth: false
   username: rails_user
   password: 'password'
 
