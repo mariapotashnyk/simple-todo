@@ -8,8 +8,8 @@ test_pattern:
 rake:
   rails_env: test
 
-postgresql:
-  version: '9.3'
+mysql:
+  adapter: 'mysql2'
 
 firefox: '46.0'
 
