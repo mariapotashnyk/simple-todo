@@ -1,1 +1,19 @@
+ruby_version: ruby-2.3.1
+bundler_version: 1.12.2
 
+postgresql:
+  version: '9.3'
+
+firefox: '31.0esr'
+
+coverage:
+  version: 2
+  enabled: true
+
+plan:
+  - default
+ # - second
+ # - third
+profiles:
+  default:
+    script: "/usr/local/repos/successful_test"
