@@ -12,9 +12,9 @@ coverage:
 
 plan:
   - default
-  - second
-  - third
-steps:
+ # - second
+ # - third
+profiles:
   default:
     script: "/usr/local/repos/successful_test"
     #coverage:
