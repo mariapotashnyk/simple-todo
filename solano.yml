@@ -1,0 +1,33 @@
+ruby_version: ruby-2.3.1
+bundler_version: 1.12.2
+
+postgresql:
+  version: '9.3'
+
+firefox: '31.0esr'
+
+coverage:
+  version: 2
+  enabled: true
+
+plan:
+  - default
+ # - second
+ # - third
+profiles:
+  default:
+    script: "/usr/local/repos/successful_test"
+    #coverage:
+    #  version: 2
+    #  enabled: true
+    #  ratchet: 60
+    #test_pattern:
+    #  - spec/controllers/comments_controller_spec.rb
+  second:
+    script: "/usr/local/repos/successful_test"
+    #test_pattern:
+    #  - spec/routing/root_route_spec.rb
+  third:
+    script: "/usr/local/repos/successful_test"
+    #test_pattern:
+    #  - spec/features/tasks/editTaskText_spec.rb
