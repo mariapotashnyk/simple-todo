@@ -17,17 +17,17 @@ profiles:
     test_pattern:
       - spec/controllers/projects_controller_spec.rb
     output:
-      - build-artifacts-name2
+      - build-artifacts-name
   second:
     input:
-      - build-artifacts-name2
+      - build-artifacts-name
     test_pattern:
       - spec/controllers/projects_controller_spec.rb
     output:
-     - build-artifacts-name3
+     - build-artifacts-name
   third:
     input:
-     - build-artifacts-name3
+     - build-artifacts-name
     test_pattern:
       - spec/controllers/tasks_controller_spec.rb
  
