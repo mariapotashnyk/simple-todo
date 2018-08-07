@@ -3,31 +3,57 @@ bundler_version: 1.12.2
 
 postgresql:
   version: '9.3'
-
-firefox: '31.0esr'
-
-coverage:
-  version: 2
-  enabled: true
-
+  
 plan:
-  - default
- # - second
- # - third
+- default
+- second
+- third
+
 profiles:
   default:
-    script: "/usr/local/repos/successful_test"
-    #coverage:
-    #  version: 2
-    #  enabled: true
-    #  ratchet: 60
-    #test_pattern:
-    #  - spec/controllers/comments_controller_spec.rb
+    input:
+      - build-artifacts-name
+    test_pattern:
+      - spec/controllers/projects_controller_spec.rb
+    output:
+      - build-artifacts-name2
   second:
-    script: "/usr/local/repos/successful_test"
-    #test_pattern:
-    #  - spec/routing/root_route_spec.rb
+    input:
+      - build-artifacts-name2
+    test_pattern:
+      - spec/controllers/projects_controller_spec.rb
+    output:
+     - build-artifacts-name3
   third:
-    script: "/usr/local/repos/successful_test"
-    #test_pattern:
-    #  - spec/features/tasks/editTaskText_spec.rb
+    input:
+     - build-artifacts-name3
+    test_pattern:
+      - spec/controllers/tasks_controller_spec.rb
+ 
+# firefox: '31.0esr'
+
+# coverage:
+#   version: 2
+#   enabled: true
+
+# plan:
+#   - default
+#  # - second
+#  # - third
+# profiles:
+#   default:
+#     script: "/usr/local/repos/successful_test"
+#     #coverage:
+#     #  version: 2
+#     #  enabled: true
+#     #  ratchet: 60
+#     #test_pattern:
+#     #  - spec/controllers/comments_controller_spec.rb
+#   second:
+#     script: "/usr/local/repos/successful_test"
+#     #test_pattern:
+#     #  - spec/routing/root_route_spec.rb
+#   third:
+#     script: "/usr/local/repos/successful_test"
+#     #test_pattern:
+#     #  - spec/features/tasks/editTaskText_spec.rb
