@@ -30,6 +30,7 @@ profiles:
     test_pattern:
       - spec/controllers/tasks_controller_spec.rb
  
+ 
 # firefox: '31.0esr'
 
 # coverage:
