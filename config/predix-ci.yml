@@ -59,3 +59,4 @@ profiles:
 #     #test_pattern:
 #     #  - spec/features/tasks/editTaskText_spec.rb
 # ruby_version: ruby-2.3.1
+
