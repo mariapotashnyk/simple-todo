@@ -1,39 +1,71 @@
-ruby_version: ruby-2.3.0
+ruby_version: ruby-2.3.1
 bundler_version: 1.12.2
 
-postgresql:
+postgresql:  
   version: '9.3'
   
-coverage:
-  version: 2
+# firefox: '31.0esr'
+
+coverage:  
+  version: 2  
   enabled: true
 
 plan:
-- default
-- second
-- third
-
+  - default
+  - second
+  - third
 profiles:
-  default:
-    input:
-      - build-artifacts-name
+  default:    
+    # script: "pwd"    
     test_pattern:
-      - spec/controllers/projects_controller_spec.rb
-    output:
-      - build-artifacts-name-1
-  second:
-    input:
-      - build-artifacts-name-1
-    test_pattern:
-      - spec/controllers/projects_controller_spec.rb
-    output:
-     - build-artifacts-name-2
+      - spec/controllers/*_controller_spec.rb  
+  second:    
+    # script: "./successful_test"    
+    test_pattern:      
+      - spec/routing/*_route_spec.rb  
   third:
-    input:
-     - build-artifacts-name-2
+    # script: "./successful_test"    
     test_pattern:
-      - spec/controllers/tasks_controller_spec.rb
- 
+      - spec/features/tasks/editTaskText_spec.rb
+     
+########################################################################### 
+# ruby_version: ruby-2.3.0
+# bundler_version: 1.12.2
+
+# postgresql:
+#   version: '9.3'
+  
+# coverage:
+#   version: 2
+#   enabled: true
+
+# plan:
+# - default
+# - second
+# - third
+
+# profiles:
+#   default:
+#     input:
+#       - build-artifacts-name
+#     test_pattern:
+#       - spec/controllers/projects_controller_spec.rb
+#     output:
+#       - build-artifacts-name-1
+#   second:
+#     input:
+#       - build-artifacts-name-1
+#     test_pattern:
+#       - spec/controllers/projects_controller_spec.rb
+#     output:
+#      - build-artifacts-name-2
+#   third:
+#     input:
+#      - build-artifacts-name-2
+#     test_pattern:
+#       - spec/controllers/tasks_controller_spec.rb
+
+########################################################################### 
  
 # firefox: '31.0esr'
 
