@@ -1,7 +1,6 @@
 class TasksController < ApplicationController
 
   before_filter :authenticate_user!
-
   before_filter :find_project
 
   def create
