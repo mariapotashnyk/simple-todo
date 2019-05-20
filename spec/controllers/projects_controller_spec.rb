@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe ProjectsController, type: :controller do
-
   render_views
 
   describe 'auth' do
