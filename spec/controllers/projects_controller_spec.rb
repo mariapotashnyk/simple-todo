@@ -157,7 +157,6 @@ RSpec.describe ProjectsController, type: :controller do
   end
 
   private
-
   def extract_name
     ->(object) { object['name'] }
   end
