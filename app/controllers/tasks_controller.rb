@@ -42,7 +42,6 @@ class TasksController < ApplicationController
   end
 
   private
-
   def find_project
     @project = current_user.projects.find(params[:project_id])
   end
