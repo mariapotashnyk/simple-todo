@@ -28,6 +28,7 @@ RSpec.describe ProjectsController, type: :controller do
   end
 
   describe 'root' do
+    
     before do
       xhr :get, :root
     end
