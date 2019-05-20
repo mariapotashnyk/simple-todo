@@ -12,6 +12,7 @@ class ApplicationController < ActionController::Base
   # before_action and after_action below are needed because of bug in devise-token-auth dealing with ng-token-auth
   # (not completely signing out, what causes old session restoring
   # when sign out from email provider and sing in with facebook provider or vice versa)
+  
   before_action do
     if params[:provider] == 'facebook'
       reset_session
